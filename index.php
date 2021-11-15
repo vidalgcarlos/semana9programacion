@@ -1,6 +1,11 @@
 <?php
   require_once 'controlador/profesor.controller.php';
   require_once 'modelo/profesores.model.php';
+
+  require_once 'controlador/facultad.controller.php';
+  require_once 'modelo/facultad.model.php';
+
+  $facultades = FacultadController::ctrListarFacultades();
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +21,12 @@
     <input type="number" placeholder="ingresa el id del empleado" id="id_empleado" name="id_empleado">
     <input type="text" placeholder="escribe tu apellido" name="apellido" id="apellido">
     <input type="text" placeholder="escribe tu nombre" name="nombre" id="nombre">
-    <input type="text" placeholder=" facultad" name="facultad" id="facultad">
+    <select name="facultad" id="facultad" required>
+      <option value="">Seleccione una facultad</option>
+      <?php foreach ($facultades as $facultad): ?>
+        <option value="<?= $facultad['facultad'] ?>"><?= $facultad['facultad'] ;?></option>
+      <?php endforeach ?>
+    </select>
     <input type="number" placeholder="Ingresa salario" name="salario" id="salario">
     <input type="date" placeholder="ingresa fecha de comienzo" name="fecha_comienzo" id="fecha_comienzo">
     <input type="date" placeholder="ingresa fecha nacimiento"name="fecha_nacimiento" id="fecha_nacimiento">

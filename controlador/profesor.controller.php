@@ -9,7 +9,7 @@
 		static public function ctrCrearProfesor(){
 			if (isset($_POST['id_empleado'])) {
 				if (!empty($_POST['id_empleado'])) {
-					$tabla = '';
+					$tabla = 'profesores';
 					$datos = [
 						'id_empleado' => $_POST['id_empleado'],
 						'apellido' => $_POST['apellido'],
