@@ -1,9 +1,15 @@
+<?php
+  require_once 'controlador/profesor.controller.php';
+  require_once 'modelo/profesores.model.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Proyecto Final Carlos Vidal</title>
 </head>
 <body>
   <form role='form' method="post">
@@ -16,9 +22,8 @@
     <input type="date" placeholder="ingresa fecha nacimiento"name="fecha_nacimiento" id="fecha_nacimiento">
     <button type="submit">Enviar formulario</button>
     <?php
-      $profesor = new Profesores();
+      $profesor = new ProfesoresController();
       $profesor->ctrCrearProfesor();
-      
     ?>
   </form>
 </body>
