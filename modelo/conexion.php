@@ -1,15 +1,15 @@
-<?php 
-
+<?php
 /**
- * 
+ *
  */
-class Conexion {
-	
+
+class Conexion
+{
 	static public function conectar(){
-		$link= new PDO("mysql:host=; dbname=profesores","root","vidalgcarlos");
+		$link = new PDO("mysql:host=localhost;dbname=profesores","root","martin07081988");
 		$link->exec("set names utf8");
-		$link->setAtribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $link;
 	}
+
 }
- ?>

@@ -6,6 +6,8 @@
 -- Generation Time: Nov 15, 2021 at 05:04 PM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
+create database profesores;
+  use profesores;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;

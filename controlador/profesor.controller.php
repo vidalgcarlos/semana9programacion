@@ -14,7 +14,9 @@
 						'id_empleado' => $_POST['id_empleado'],
 						'apellido' => $_POST['apellido'],
 						'nombre' => $_POST['nombre'],
+						'seccional' => $_POST['seccional'],
 						'facultad' => $_POST['facultad'],
+						'cargo'=> $_POST['cargo'],
 						'salario' => $_POST['salario'],
 						'fecha_comienzo' => $_POST['fecha_comienzo'],
 						'fecha_nacimiento' => $_POST['fecha_nacimiento']
@@ -39,7 +41,7 @@
 							Swal.fire({
 								icon:"error",
 								title:"Error",
-								text:"Se produjo un error al intentar agregar un profesor",
+								html:"Se produjo un error al intentar agregar un profesor<br>'.$agregar.'",
 								showconfirmButton:true,
 								confirmButtonText:"Ok"
 							}).then((result)=>{
@@ -51,6 +53,21 @@
 					}
 				}
 			}
+		}
+
+		static public function ctrListarAntiguedades(){
+			$antiguedades = ProfesorModel::mdlListarAntiguedadesProfesores();
+			return $antiguedades;
+		}
+
+		static public function ctrListarSueldoMasBajo(){
+			$sueldomasbajo = ProfesorModel::mdlListarSueldosMasBajos();
+			return $sueldomasbajo;
+		}
+
+		static public function ctrListadoProfesores(){
+			$listado = ProfesorModel::mdlListarProfesores();
+			return $listado;
 		}
 	}
 ?>
