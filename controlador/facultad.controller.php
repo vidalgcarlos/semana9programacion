@@ -3,7 +3,7 @@
  */
 class FacultadController
 {
-	static public function ctrMostrarFacultades(){
+	static public function ctrListarFacultades(){
 		$tabla = 'profesores';
 		$respuesta = FacultadModel::mdlMostrarFacultades($tabla);
 		return $respuesta;
