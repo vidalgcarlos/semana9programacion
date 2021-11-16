@@ -69,5 +69,15 @@
 			$listado = ProfesorModel::mdlListarProfesores();
 			return $listado;
 		}
+
+		static public function ctrListarIngenieria(){
+			$ingenieria = ProfesorModel::mdlListarIngenieria();
+			return $ingenieria;
+		}
+
+		static public function ctrSumarSueldosPorDepartamento(){
+			$sueldosMensuales = ProfesorModel::mdlSumarSueldosPorFacultad();
+			return $sueldosMensuales;
+		}
 	}
 ?>

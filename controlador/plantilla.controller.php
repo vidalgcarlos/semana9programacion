@@ -20,6 +20,14 @@
 		public function ctrMostrarListado(){
 			include 'vista/listado.php';
 		}
+
+		public function ctrMostrarIngenieria(){
+			include 'vista/ingenieria.php';
+		}
+
+		public function ctrMostrarGastosAnuales(){
+			include 'vista/gastosanuales.php';
+		}
 	}
 
 ?>

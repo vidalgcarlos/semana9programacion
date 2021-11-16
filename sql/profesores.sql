@@ -1,33 +1,11 @@
--- phpMyAdmin SQL Dump
--- version 5.1.0
--- https://www.phpmyadmin.net/
---
--- Host: localhost:8889
--- Generation Time: Nov 15, 2021 at 05:04 PM
--- Server version: 5.7.34
--- PHP Version: 7.4.21
+
 create database profesores;
-  use profesores;
+
+use profesores;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `profesores`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `profesores`
---
 
 CREATE TABLE `profesores` (
   `id` int(11) NOT NULL,
@@ -42,9 +20,6 @@ CREATE TABLE `profesores` (
   `fecha_nacimiento` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `profesores`
---
 
 INSERT INTO `profesores` (`id`, `id_empleado`, `apellido`, `nombre`, `seccional`, `facultad`, `cargo`, `salario`, `fecha_comienzo`, `fecha_nacimiento`) VALUES
 (24, 1968, 'Burgos', 'Jeronimo', 'Palmira', 'Administración', 'Administrativo', 3200000, '1982-04-05', '1951-09-28'),
@@ -162,27 +137,10 @@ INSERT INTO `profesores` (`id`, `id_empleado`, `apellido`, `nombre`, `seccional`
 (136, 1677, 'Hernandez ', 'Juan', 'Bogotá', 'Publicidad', 'Docente investigador', 3700000, '1987-11-06', '1969-09-16'),
 (137, 1427, 'Jaramillo', 'David', 'Bogotá', 'Publicidad', 'Docente investigador', 3400000, '1977-08-31', '1958-03-19');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `profesores`
---
 ALTER TABLE `profesores`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `profesores`
---
 ALTER TABLE `profesores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

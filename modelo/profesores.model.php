@@ -79,5 +79,39 @@
 				return $retorno;
 			}
 		}
+
+		static public function mdlListarIngenieria(){
+			try {
+				$stmt = Conexion::conectar()->prepare("SELECT nombre, apellido, fecha_comienzo from profesores where facultad = 'Ingeniería' ");
+				$stmt->execute();
+				$retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			} catch (PDOException $e) {
+				$error  = $e->getMessage();
+			}
+
+			$stmt = null;
+			if (isset($error)) {
+				return $error;
+			} else {
+				return $retorno;
+			}
+		}
+
+		static public function mdlSumarSueldosPorFacultad(){
+			try {
+				$stmt = Conexion::conectar()->prepare("SELECT SUM(salario) AS salario ,facultad FROM profesores GROUP BY facultad ");
+				$stmt->execute();
+				$retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			} catch (PDOException $e) {
+				$error  = $e->getMessage();
+			}
+
+			$stmt = null;
+			if (isset($error)) {
+				return $error;
+			} else {
+				return $retorno;
+			}
+		}
 	}
 ?>

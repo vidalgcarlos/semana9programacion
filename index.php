@@ -21,7 +21,13 @@
   } else if ($_GET['ruta']=='listado'){
     $listado = new PlantillaController();
     $listado->ctrMostrarListado();
-  }else {
+  } else if ($_GET['ruta'] =='ingenieria'){
+    $ingenieria = new PlantillaController();
+    $ingenieria->ctrMostrarIngenieria();
+  } else if ($_GET['ruta'] =='gastosanuales') {
+    $gastoanual = new PlantillaController();
+    $gastoanual->ctrMostrarGastosAnuales();
+  } else {
     $home = new PlantillaController();
     $home->ctrMostrarHome();
   }
